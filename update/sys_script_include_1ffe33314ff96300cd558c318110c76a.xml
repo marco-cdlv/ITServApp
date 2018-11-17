@@ -42,10 +42,10 @@ GetWorkOrders.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					//workOrderRecord.requested_end = responseBody[index].Requested_End;					
 					workOrderRecord.site_name = responseBody[index]["Site.Name"];
 					workOrderRecord.status = responseBody[index].Status;
-					
-					workOrderRecord.dispatcher_name = responseBody[index]["Dispatcher.Name"];
-					workOrderRecord.technician_name = responseBody[index]["Technician.Name"];
 					workOrderRecord.service_request_name = responseBody[index]["Service_Request.Name"];
+					workOrderRecord.dispatcher_name = responseBody[index]["Dispatcher.Name"];					
+					workOrderRecord.technician_name = responseBody[index]["Technician.Name"];					
+					workOrderRecord.sreq_id = responseBody[index]["Service_Request.Name"];
 					workOrderRecord.insert();
 					workOrderRecord.setWorkflow(true);					
 					gs.info('A new record was added!!');					
@@ -65,13 +65,13 @@ GetWorkOrders.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-11-16 23:32:07</sys_created_on>
         <sys_id>1ffe33314ff96300cd558c318110c76a</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>GetWorkOrders</sys_name>
         <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
         <sys_update_name>sys_script_include_1ffe33314ff96300cd558c318110c76a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-11-17 00:13:01</sys_updated_on>
+        <sys_updated_on>2018-11-17 00:42:20</sys_updated_on>
     </sys_script_include>
 </record_update>

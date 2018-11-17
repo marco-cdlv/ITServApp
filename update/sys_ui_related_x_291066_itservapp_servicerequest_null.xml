@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_291066_itservapp_servicerequest" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="ServiceRequest - Default view" name="x_291066_itservapp_servicerequest" related_list="NULL" sys_domain="global" view="Default view">cbd4d08e4ff96300cd558c318110c78b</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_291066_itservapp_workorder.service_request_name</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-17 01:05:01</sys_created_on>
+            <sys_id>c3d4d08e4ff96300cd558c318110c78c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-17 01:05:01</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>ServiceRequest - Default view</calculated_name>
+            <filter/>
+            <name>x_291066_itservapp_servicerequest</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-17 01:05:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cbd4d08e4ff96300cd558c318110c78b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ServiceRequest - Default view</sys_name>
+            <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+            <sys_update_name>sys_ui_related_x_291066_itservapp_servicerequest_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-17 01:05:01</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
