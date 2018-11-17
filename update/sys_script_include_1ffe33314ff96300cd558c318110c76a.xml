@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_291066_itservapp.GetWorkOrders</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetWorkOrders</name>
+        <script><![CDATA[var GetWorkOrders = Class.create();
+GetWorkOrders.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	populateWorOrders : function() {
+		gs.info("CALLING TO THE populateWorOrders");
+		try { 
+			 var r = new sn_ws.RESTMessageV2('x_291066_itservapp.GetAllWorkOrders', 'Default GET');
+			 var response = r.execute();			 
+			 var httpStatus = response.getStatusCode();
+			
+			gs.info("TES TES TEST");
+			gs.info(httpStatus);			
+		
+			if (httpStatus === 200 ) {			
+				//gs.info(response.getBody());
+				var responseBody = JSON.parse(response.getBody());		
+				var workOrderRecord;
+				
+				for (var index = 0; index < responseBody.length ; index++) {			
+					workOrderRecord = new GlideRecord("x_291066_itservapp_workorder");
+					workOrderRecord.initialize();
+
+					// Check if the value already exists on WorkOrder table.
+					if(workOrderRecord.get(responseBody[index]["Service_Request.Name"])) {	
+						gs.info("CONTINUE!!!");
+						continue;
+					}
+					gs.info("NO CONTINUE!!!");
+					// Saving in ITService table.
+					workOrderRecord.wo_id = responseBody[index].Id;
+					workOrderRecord.summary = responseBody[index].Summary;
+					workOrderRecord.task_type_name = responseBody[index]["Task_Type_Record.Name"];					
+					//workOrderRecord.requested_start = responseBody[index].Requested_Start;
+					//workOrderRecord.requested_end = responseBody[index].Requested_End;					
+					workOrderRecord.site_name = responseBody[index]["Site.Name"];
+					workOrderRecord.status = responseBody[index].Status;
+					
+					workOrderRecord.dispatcher_name = responseBody[index]["Dispatcher.Name"];
+					workOrderRecord.technician_name = responseBody[index]["Technician.Name"];
+					workOrderRecord.service_request_name = responseBody[index]["Service_Request.Name"];
+					workOrderRecord.insert();
+					workOrderRecord.setWorkflow(true);					
+					gs.info('A new record was added!!');					
+				}
+			}
+			gs.info("added added added");
+			
+		}
+		catch(ex) {
+			var message = ex.message;
+		}
+	},
+	
+    type: 'GetWorkOrders'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-16 23:32:07</sys_created_on>
+        <sys_id>1ffe33314ff96300cd558c318110c76a</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>GetWorkOrders</sys_name>
+        <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+        <sys_update_name>sys_script_include_1ffe33314ff96300cd558c318110c76a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-17 00:13:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

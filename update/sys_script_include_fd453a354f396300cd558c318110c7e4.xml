@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_291066_itservapp.GetServiceRequests</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetServiceRequests</name>
+        <script><![CDATA[var GetServiceRequests = Class.create();
+GetServiceRequests.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	populateServiceRequests : function() {
+		gs.info("STARTING!!!");
+		try { 		
+			var r = new sn_ws.RESTMessageV2('x_291066_itservapp.GetAllServiceRequests', 'Default GET');
+			var response = r.execute();
+			var statusCode = response.getStatusCode();	
+
+		 	gs.info("TEST0");
+		 	gs.info(statusCode);
+		// 	gs.info(response.getBody());
+
+			if(statusCode === 200) {
+				var responseBody = JSON.parse(response.getBody());		
+				var gr;		
+
+				for (var index = 0; index < responseBody.length ; index++) {			
+					gr = new GlideRecord("x_291066_itservapp_servicerequest");
+					gr.initialize();
+
+					// Check if the value already exists on ITService table.
+					if(gr.get(responseBody[index].Name)) {				
+						continue;
+					}
+					// Saving in ITService table.
+					gr.account = responseBody[index].Account;
+					gr.site = responseBody[index].Site;
+					gr.task_type = responseBody[index].Task_Type_Record;
+					gr.summary = responseBody[index].Summary;
+
+					gr.sreq_id = responseBody[index].Name;
+					gr.requested_by = responseBody[index].Requested_By;
+					gr.task_type_name = responseBody[index]["Task_Type_Record.Name"];
+					gr.site_name = responseBody[index]["Site.Name"];
+					gr.status = responseBody[index].Status;
+// 					gr.canRead();
+// 					gr.canWrite();
+// 					gr.canDelete();
+// 					gr.canCreate();
+// 					gr.canRead();
+					gr.insert();
+					gr.setWorkflow(true);					
+					gs.info('A new record was added!!');					
+				}		
+			}	
+
+		}
+		catch(ex) {
+			var message = ex.message;
+		}
+	},
+	
+    type: 'GetServiceRequests'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-16 18:09:00</sys_created_on>
+        <sys_id>fd453a354f396300cd558c318110c7e4</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>GetServiceRequests</sys_name>
+        <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+        <sys_update_name>sys_script_include_fd453a354f396300cd558c318110c7e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-16 23:14:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

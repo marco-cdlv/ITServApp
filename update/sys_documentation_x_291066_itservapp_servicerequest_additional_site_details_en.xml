@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="additional_site_details" label="Additional Site details" language="en" table="x_291066_itservapp_servicerequest">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>additional_site_details</element>
+            <help/>
+            <hint/>
+            <label>Additional Site details</label>
+            <language>en</language>
+            <name>x_291066_itservapp_servicerequest</name>
+            <plural>Additional Site details</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-16 18:04:43</sys_created_on>
+            <sys_id>daa472354f396300cd558c318110c793</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Additional Site details</sys_name>
+            <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+            <sys_update_name>sys_documentation_x_291066_itservapp_servicerequest_additional_site_details_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-16 18:04:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

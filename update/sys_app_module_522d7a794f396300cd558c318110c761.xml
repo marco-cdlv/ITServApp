@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="ITServApp">41b7b2b54f396300cd558c318110c726</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>WorkOrders</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_291066_itservapp_workorder</name>
+        <order>200</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_291066_itservapp.workorder_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-16 18:41:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>522d7a794f396300cd558c318110c761</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Work Orders</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+        <sys_update_name>sys_app_module_522d7a794f396300cd558c318110c761</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-17 00:18:26</sys_updated_on>
+        <timeline_page/>
+        <title>Work Orders</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

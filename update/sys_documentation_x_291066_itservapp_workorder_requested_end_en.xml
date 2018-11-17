@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="requested_end" label="Requested End" language="en" table="x_291066_itservapp_workorder">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>requested_end</element>
+            <help/>
+            <hint/>
+            <label>Requested End</label>
+            <language>en</language>
+            <name>x_291066_itservapp_workorder</name>
+            <plural>Requested Ends</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-11-16 18:44:03</sys_created_on>
+            <sys_id>eeadfe794f396300cd558c318110c780</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Requested End</sys_name>
+            <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+            <sys_update_name>sys_documentation_x_291066_itservapp_workorder_requested_end_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-11-16 18:44:03</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

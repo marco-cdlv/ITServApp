@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <authentication_type>oauth2</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>GetWOBySREQID</name>
+        <oauth2_profile display_value="OAuth_ITService_Client default_profile">8075d3704ff92300cd558c318110c700</oauth2_profile>
+        <protocol_name/>
+        <rest_endpoint>https://qe4-analyst.sitehands.com/rest/api/v1/list?objectType=Work_Order&amp;ServiceRequest='${ServiceRequest}'</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-16 23:19:02</sys_created_on>
+        <sys_id>3c5c77bd4fb96300cd558c318110c74c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetWOBySREQID</sys_name>
+        <sys_package display_value="ITServApp" source="x_291066_itservapp">eb5332b14f396300cd558c318110c71c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ITServApp">eb5332b14f396300cd558c318110c71c</sys_scope>
+        <sys_update_name>sys_rest_message_3c5c77bd4fb96300cd558c318110c74c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-16 23:19:02</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>
